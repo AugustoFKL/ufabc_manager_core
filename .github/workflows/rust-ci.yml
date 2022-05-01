@@ -2,7 +2,6 @@
 name: Super Linter
 on:
   push:
-    branches: [master]
 jobs:
   linter:
     runs-on: ubuntu-latest
