@@ -1,0 +1,16 @@
+---
+name: Super Linter
+on:
+  push:
+    branches: [master]
+jobs:
+  linter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Update Toolchain
+        run: rustup update
+      - uses: Swatinem/rust-cache@v1
+      - name: Tests
+        run: cargo test
