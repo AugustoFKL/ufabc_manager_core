@@ -10,8 +10,12 @@ graduation. It is supposed to be the Core structure of three projects in develop
   Core. The only reason to have an API is to test the usage of the three components, and the API wasn't really needed.
 - UFABC Manager CLI - represents the application that the user will actually call.
 
-```mermaid graph LR;    
- CLI --> API; API --> Core; Core --?--> Database[User info database]; Core --?--> File[User  info file];  
+```mermaid 
+graph LR;  
+  CLI --> API; 
+  API --> Core;
+  Core --?--> Database[User info database];
+  Core --?--> File[User  info file];  
  ```   
 
 # Project Status
@@ -59,4 +63,4 @@ applications:
 | Application |   Version    | Optional |
 |:-----------:|:------------:|:--------:|
 |   Docker    |    Latest    |  false   |
- |    Rust     | Cargo 1.59.0 |  false   |
+|    Rust     | Cargo 1.59.0 |  false   |
